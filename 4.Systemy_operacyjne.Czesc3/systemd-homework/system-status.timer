@@ -1,0 +1,10 @@
+[Unit]
+Description=Run system-status.service twice a day
+
+[Timer]
+OnCalendar=*-*-* 06,18:00:00
+Persistent=true
+Unit=system-status.service
+
+[Install]
+WantedBy=timers.target
